@@ -55,19 +55,18 @@ npm install
 
 ### 2. Add environment variables
 
-Create a `backend/.env` file and add:
+The `.env` files are not included in the repository, so create them manually before running the project.
+
+Create `backend/.env` and add:
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 CLIENT_ORIGIN=http://localhost:5173
-RATE_LIMIT_WINDOW_MS=900000
-RATE_LIMIT_MAX_REQUESTS=100
-AUTH_RATE_LIMIT_MAX_REQUESTS=10
 ```
 
-If needed, create `frontend/.env` and add:
+Create `frontend/.env` only if you want to change the default API URL:
 
 ```env
 VITE_API_BASE_URL=http://localhost:5000
