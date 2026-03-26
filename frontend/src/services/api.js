@@ -1,6 +1,7 @@
 import { getStoredAuth } from "../utils/authStorage";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:5000";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL ?? "https://act-backend-dyy0.onrender.com";
 
 export async function apiRequest(endpoint, options = {}) {
   const { token } = getStoredAuth();

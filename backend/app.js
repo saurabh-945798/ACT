@@ -6,7 +6,10 @@ import { apiRateLimit, authRateLimit } from "./middleware/rateLimitMiddleware.js
 
 export function createApp() {
   const app = express();
-  const allowedOrigins = (process.env.CLIENT_ORIGIN ?? "http://localhost:5173")
+  const allowedOrigins = (
+    process.env.CLIENT_ORIGIN ??
+    "http://localhost:5173,https://act-assessment.netlify.app"
+  )
     .split(",")
     .map((origin) => origin.trim())
     .filter(Boolean);
